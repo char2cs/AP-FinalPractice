@@ -14,9 +14,9 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="com.char2cs.Domain.Turista" />
-        <mapping class="com.char2cs.Domain.Vehiculo" />
-        <mapping class="com.char2cs.Domain.PuntoAlquiler" />
-        <mapping class="com.char2cs.Domain.Alquiler" />
+        <mapping class="com.char2cs.Domain.Consulta" />
+        <mapping class="com.char2cs.Domain.Medico" />
+        <mapping class="com.char2cs.Domain.Mascota" />
+        <mapping class="com.char2cs.Domain.Cliente" />
     </session-factory>
 </hibernate-configuration>
