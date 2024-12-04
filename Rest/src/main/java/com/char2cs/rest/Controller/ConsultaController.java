@@ -63,7 +63,7 @@ public class ConsultaController {
             ).build();
         }
         catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Error parsing JSON").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Error: Client don't exists").build();
         }
     }
 
@@ -85,7 +85,7 @@ public class ConsultaController {
             ).build();
         }
         catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Error parsing JSON").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Error: Client don't exists").build();
         }
     }
 
@@ -107,7 +107,7 @@ public class ConsultaController {
             ).build();
         }
         catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Error parsing JSON").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Error: Client don't exists").build();
         }
     }
 
@@ -143,7 +143,7 @@ public class ConsultaController {
             ).build();
         }
         catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Error parsing JSON").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Error: Client don't exists").build();
         }
     }
 
@@ -183,7 +183,7 @@ public class ConsultaController {
             ).build();
         }
         catch (Exception e) {
-            return Response.status(Response.Status.NOT_FOUND).entity("Error parsing JSON").build();
+            return Response.status(Response.Status.NOT_FOUND).entity("Error: Client don't exists").build();
         }
     }
 }
