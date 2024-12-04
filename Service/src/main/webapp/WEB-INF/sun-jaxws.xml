@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+    <endpoint
+            name='WSoap'
+            implementation='com.char2cs.Soap.WebSericeSOAP'
+            url-pattern='/soapservices' />
+    <endpoint
+            name='AlquilerServiceSoap'
+            implementation='com.char2cs.Soap.AlquilerServiceSoap'
+            url-pattern='/AlquilerServiceSoap' />
+    <endpoint
+            name='PuntoAlquilerServiceSoap'
+            implementation='com.char2cs.Soap.PuntoAlquilerServiceSoap'
+            url-pattern='/PuntoAlquilerServiceSoap' />
+    <endpoint
+            name='TuristaServiceSoap'
+            implementation='com.char2cs.Soap.TuristaServiceSoap'
+            url-pattern='/TuristaServiceSoap' />
+    <endpoint
+            name='VehiculoServiceSoap'
+            implementation='com.char2cs.Soap.VehiculoServiceSoap'
+            url-pattern='/VehiculoServiceSoap' />
+</endpoints>
