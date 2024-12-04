@@ -14,6 +14,7 @@ import java.util.List;
 @WebService
 public class AlquilerServiceSoap {
     private static AlquilerService alquilerService = new AlquilerService(Datamethod.HIBERNATE);
+
     @WebMethod
     public boolean create(Alquiler alquiler) throws ObjectAlreadyExistsException {
         alquilerService.create(alquiler);
@@ -28,14 +29,12 @@ public class AlquilerServiceSoap {
     @WebMethod
     public boolean update(Alquiler alquiler) throws ObjectNotFoundException, OperationFailedException {
         alquilerService.update(alquiler);
-
         return true;
     }
 
     @WebMethod
     public boolean delete(Integer id) throws ObjectNotFoundException, OperationFailedException {
         alquilerService.delete(id);
-
         return true;
     }
 

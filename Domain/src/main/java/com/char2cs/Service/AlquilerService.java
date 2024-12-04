@@ -10,7 +10,7 @@ import com.char2cs.Factory.Factory;
 
 import java.util.List;
 
-public class AlquilerService implements Crud<Alquiler> {
+public class AlquilerService {
     private AlquilerDAO alquilerDAO;
     private PuntoAlquilerDAO puntoAlquilerDAO;
     private VehiculoDAO vehiculoDAO;
@@ -25,7 +25,6 @@ public class AlquilerService implements Crud<Alquiler> {
         this.turistaDAO = Factory.getTuristaDAO(datamethod);
     }
 
-    @Override
     public void create(Alquiler alquiler) throws ObjectAlreadyExistsException {
         try {
             puntoAlquilerDAO.get(alquiler.getPuntoAlquiler().getId());
@@ -54,22 +53,18 @@ public class AlquilerService implements Crud<Alquiler> {
         alquilerDAO.create(alquiler);
     }
 
-    @Override
     public Alquiler get(Integer id) throws ObjectNotFoundException {
         return alquilerDAO.get(id);
     }
 
-    @Override
     public boolean update(Alquiler objects) throws ObjectNotFoundException, OperationFailedException {
         return alquilerDAO.update(objects);
     }
 
-    @Override
     public boolean delete(Integer id) throws ObjectNotFoundException, OperationFailedException {
         return alquilerDAO.delete(id);
     }
 
-    @Override
     public List<Alquiler> getAll() {
         return alquilerDAO.getAll();
     }

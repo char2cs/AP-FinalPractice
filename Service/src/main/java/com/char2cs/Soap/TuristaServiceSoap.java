@@ -16,8 +16,9 @@ public class TuristaServiceSoap {
     private static TuristaService turistaService = new TuristaService(Datamethod.HIBERNATE);
 
     @WebMethod
-    public void create(Turista turista) throws ObjectAlreadyExistsException {
+    public boolean create(Turista turista) throws ObjectAlreadyExistsException {
         turistaService.create(turista);
+        return true;
     }
 
     @WebMethod

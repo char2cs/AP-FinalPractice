@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+
+    <!-- Turista Service -->
     <endpoint
-            name='WSoap'
-            implementation='com.char2cs.Soap.WebSericeSOAP'
-            url-pattern='/soapservices' />
+            name="TuristaServiceSoap"
+            implementation="com.char2cs.Soap.TuristaServiceSoap"
+            url-pattern="/Turista" />
+
+    <!-- Alquiler Service -->
     <endpoint
-            name='AlquilerServiceSoap'
-            implementation='com.char2cs.Soap.AlquilerServiceSoap'
-            url-pattern='/AlquilerServiceSoap' />
+            name="AlquilerServiceSoap"
+            implementation="com.char2cs.Soap.AlquilerServiceSoap"
+            url-pattern="/Alquiler" />
+
+    <!-- Punto Alquiler Service -->
     <endpoint
-            name='PuntoAlquilerServiceSoap'
-            implementation='com.char2cs.Soap.PuntoAlquilerServiceSoap'
-            url-pattern='/PuntoAlquilerServiceSoap' />
+            name="PuntoAlquilerServiceSoap"
+            implementation="com.char2cs.Soap.PuntoAlquilerServiceSoap"
+            url-pattern="/PuntoAlquiler" />
+
+    <!-- Vehiculo Service -->
     <endpoint
-            name='TuristaServiceSoap'
-            implementation='com.char2cs.Soap.TuristaServiceSoap'
-            url-pattern='/TuristaServiceSoap' />
-    <endpoint
-            name='VehiculoServiceSoap'
-            implementation='com.char2cs.Soap.VehiculoServiceSoap'
-            url-pattern='/VehiculoServiceSoap' />
+            name="VehiculoServiceSoap"
+            implementation="com.char2cs.Soap.VehiculoServiceSoap"
+            url-pattern="/Vehiculo" />
+
 </endpoints>
