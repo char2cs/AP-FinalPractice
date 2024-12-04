@@ -2,28 +2,9 @@
 
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
 
-    <!-- Turista Service -->
     <endpoint
-            name="TuristaServiceSoap"
-            implementation="com.char2cs.Soap.TuristaServiceSoap"
-            url-pattern="/Turista" />
-
-    <!-- Alquiler Service -->
-    <endpoint
-            name="AlquilerServiceSoap"
-            implementation="com.char2cs.Soap.AlquilerServiceSoap"
-            url-pattern="/Alquiler" />
-
-    <!-- Punto Alquiler Service -->
-    <endpoint
-            name="PuntoAlquilerServiceSoap"
-            implementation="com.char2cs.Soap.PuntoAlquilerServiceSoap"
-            url-pattern="/PuntoAlquiler" />
-
-    <!-- Vehiculo Service -->
-    <endpoint
-            name="VehiculoServiceSoap"
-            implementation="com.char2cs.Soap.VehiculoServiceSoap"
-            url-pattern="/Vehiculo" />
+            name="ConsultaSoap"
+            implementation="com.char2cs.Soap.ConsultaSoap"
+            url-pattern="/Consulta" />
 
 </endpoints>

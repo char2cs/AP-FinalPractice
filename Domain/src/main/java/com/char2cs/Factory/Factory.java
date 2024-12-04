@@ -1,54 +1,46 @@
 package com.char2cs.Factory;
 
-import com.char2cs.DAO.AlquilerDAO;
-import com.char2cs.DAO.PuntoAlquilerDAO;
-import com.char2cs.DAO.TuristaDAO;
-import com.char2cs.DAO.VehiculoDAO;
-import com.char2cs.Impl.HibernateMysql.AlquilerImp;
-import com.char2cs.Impl.HibernateMysql.PuntoAlquilerImp;
-import com.char2cs.Impl.HibernateMysql.TuristaImp;
-import com.char2cs.Impl.HibernateMysql.VehiculoImp;
+import com.char2cs.DAO.ClienteDAO;
+import com.char2cs.DAO.ConsultaDAO;
+import com.char2cs.DAO.MascotaDAO;
+import com.char2cs.DAO.MedicoDAO;
+import com.char2cs.Impl.HibernateMysql.ClienteHibernate;
+import com.char2cs.Impl.HibernateMysql.ConsultaHibernate;
+import com.char2cs.Impl.HibernateMysql.MascotaHibernate;
+import com.char2cs.Impl.HibernateMysql.MedicoHibernate;
 
 public class Factory {
-    public static AlquilerDAO getAlquilerDAO(
-            Datamethod datamethod
-    ) {
+    public static ConsultaDAO consultaDAO(Datamethod datamethod) {
         switch (datamethod) {
             case HIBERNATE:
-                return new AlquilerImp();
+                return new ConsultaHibernate();
             default:
                 return null;
         }
     }
 
-    public static PuntoAlquilerDAO getPuntoAlquilerImp(
-            Datamethod datamethod
-    ) {
+    public static ClienteDAO clienteDAO(Datamethod datamethod) {
         switch (datamethod) {
             case HIBERNATE:
-                return new PuntoAlquilerImp();
+                return new ClienteHibernate();
             default:
                 return null;
         }
     }
 
-    public static TuristaDAO getTuristaDAO(
-            Datamethod datamethod
-    ) {
+    public static MascotaDAO mascotaDAO(Datamethod datamethod) {
         switch (datamethod) {
             case HIBERNATE:
-                return new TuristaImp();
+                return new MascotaHibernate();
             default:
                 return null;
         }
     }
 
-    public static VehiculoDAO getVehiculoDAO(
-            Datamethod datamethod
-    ) {
+    public static MedicoDAO medicoDAO(Datamethod datamethod) {
         switch (datamethod) {
             case HIBERNATE:
-                return new VehiculoImp();
+                return new MedicoHibernate();
             default:
                 return null;
         }

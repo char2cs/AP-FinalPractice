@@ -52,7 +52,18 @@
             <artifactId>jaxws-api</artifactId>
             <version>2.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>antlr</groupId>
+            <artifactId>antlr</artifactId>
+            <version>2.7.7</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-rt</artifactId>
+            <version>2.3.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -64,55 +75,13 @@
 
                     <executions>
                         <execution>
-                            <id>generateAlquiler</id>
+                            <id>ConsultaGen</id>
                             <goals>
                                 <goal>wsimport</goal>
                             </goals>
                             <configuration>
                                 <wsdlUrls>
-                                    <wsdlUrl>http://127.0.0.1:8180/Service-1.0-SNAPSHOT/Alquiler?wsdl</wsdlUrl>
-                                </wsdlUrls>
-                                <keep>true</keep>
-                                <packageName>com.char2cs.rest.soap.client.generated</packageName>
-                                <sourceDestDir>${project.build.directory}/generated-sources</sourceDestDir>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generatePuntoAlquiler</id>
-                            <goals>
-                                <goal>wsimport</goal>
-                            </goals>
-                            <configuration>
-                                <wsdlUrls>
-                                    <wsdlUrl>http://127.0.0.1:8180/Service-1.0-SNAPSHOT/PuntoAlquiler?wsdl</wsdlUrl>
-                                </wsdlUrls>
-                                <keep>true</keep>
-                                <packageName>com.char2cs.rest.soap.client.generated</packageName>
-                                <sourceDestDir>${project.build.directory}/generated-sources</sourceDestDir>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generateTurista</id>
-                            <goals>
-                                <goal>wsimport</goal>
-                            </goals>
-                            <configuration>
-                                <wsdlUrls>
-                                    <wsdlUrl>http://127.0.0.1:8180/Service-1.0-SNAPSHOT/Turista?wsdl</wsdlUrl>
-                                </wsdlUrls>
-                                <keep>true</keep>
-                                <packageName>com.char2cs.rest.soap.client.generated</packageName>
-                                <sourceDestDir>${project.build.directory}/generated-sources</sourceDestDir>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>generateVehiculo</id>
-                            <goals>
-                                <goal>wsimport</goal>
-                            </goals>
-                            <configuration>
-                                <wsdlUrls>
-                                    <wsdlUrl>http://127.0.0.1:8180/Service-1.0-SNAPSHOT/Vehiculo?wsdl</wsdlUrl>
+                                    <wsdlUrl>http://127.0.0.1:8180/Service-1.0-SNAPSHOT/Consulta?wsdl</wsdlUrl>
                                 </wsdlUrls>
                                 <keep>true</keep>
                                 <packageName>com.char2cs.rest.soap.client.generated</packageName>
